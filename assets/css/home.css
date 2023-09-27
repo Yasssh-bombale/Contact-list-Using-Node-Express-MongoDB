@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.main {
+  padding: 10px;
+  width: 100%;
+  height: 1000vh;
+  background: linear-gradient(141deg, #dedede, #ae6d6d);
+}
+.heading-container {
+  text-align: center;
+  margin: 3px auto -2px;
+  padding: 10px;
+}
+
+.heading-container h1 {
+  font-size: 41px;
+  font-weight: 600;
+}
+.contactList {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactList ul {
+  list-style: none;
+  padding: 10px;
+}
+.contactList ul li {
+  display: flex;
+  /* justify-content: space-between; */
+  /* gap: 250px; */
+  /* border: 1px solid black; */
+  padding: 11px;
+  margin-bottom: 11px;
+  border-radius: 9px;
+  background: linear-gradient(180deg, #ffffff, #a58888);
+}
+
+ul li .del-icon {
+  /* padding: 10px; */
+
+  margin-right: 10px;
+  cursor: pointer;
+  color: black;
+}
+
+ul li .del-icon:hover {
+  /* padding: 10px; */
+  color: #fff;
+}
+
+.contactList #list-container li #p-name {
+  /* padding: 5px; */
+  /* border: 1px solid black; */
+  margin-right: 219px;
+  width: 304px;
+  overflow-wrap: break-word;
+}
+.contactList #list-container li #p-phone {
+  /* border: 1px solid black; */
+  width: 111px;
+  overflow-wrap: break-word;
+}
+.contactList #list-container li .phone-del {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+/* form styling */
+
+.form-container {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.form-container #name {
+  background: #eeeeee;
+  border: none;
+  outline: none;
+  margin-right: 31px;
+  border-radius: 10px;
+  padding: 12px 26px 12px;
+}
+.form-container #name::placeholder {
+  font-size: 15px;
+  font-weight: 400px;
+}
+.form-container #phone {
+  background: #eeeeee;
+  border: none;
+  outline: none;
+  margin-right: 31px;
+  border-radius: 10px;
+  padding: 12px 26px 12px;
+}
+.form-container #phone::placeholder {
+  font-size: 15px;
+  font-weight: 400px;
+}
+
+.form-container #addbtn {
+  padding: 10px 35px 10px;
+  border: none;
+  outline: none;
+  background: #ff8838;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 10px;
+}
+.form-container #addbtn:hover {
+  background: #d7793a;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/4f027a41bf.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/home.css" />
+
+    <title><%= title %></title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="heading-container">
+        <h1><i class="fa-regular fa-address-book"></i> Contacts</h1>
+      </div>
+
+      <div class="contactList">
+        <ul id="list-container">
+          <% for(let i of contact_List) {%>
+
+          <li>
+            <p id="p-name"><%= i.name%></p>
+            <div class="phone-del">
+              <p id="p-phone"><%= i.phone%></p>
+
+              <a href="/delete-contact/?id=<%=i._id%>">
+                <i class="fa-solid fa-trash del-icon"></i>
+              </a>
+            </div>
+          </li>
+
+          <%} %>
+        </ul>
+      </div>
+
+      <div class="form-container">
+        <form action="/create-contact" method="POST">
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Enter your name "
+            required
+          />
+          <input
+            id="phone"
+            type="number"
+            name="phone"
+            placeholder="Enter your phone"
+            required
+          />
+
+          <button id="addbtn" type="submit">Add details</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/home.js"></script>
+  </body>
+</html>
